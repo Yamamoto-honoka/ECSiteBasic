@@ -13,7 +13,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginUserId;
 	private String loginPassword;
 	private String result;
-	private Map<String, Object>session;
+	private Map<String, Object> session;
 	
 	public String execute() {
 		LoginDAO loginDAO = new LoginDAO();
@@ -22,13 +22,14 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		
 		result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
-		session.put("lohinUser", loginDTO);
+		session.put("loginUser", loginDTO);
 		
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
 			result = SUCCESS;
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-			session.put("login_user_id", loginDTO.getLoginId());
-			session.put("id",buyItemDTO.getId());
+			
+			session.put(loginUserId, loginDTO.getLoginId());
+			session.put("id", buyItemDTO.getId());
 			session.put("buyItem_name", buyItemDTO.getItemName());
 			session.put("buyItem_price", buyItemDTO.getItemPrice());
 			return result;
@@ -52,7 +53,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		this.loginPassword = loginPassword;
 	}
 	
-	public Map<String, Object>getSession(){
+	public Map<String, Object> getSession(){
 		return session;
 	}
 	
