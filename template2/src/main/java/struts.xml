@@ -49,5 +49,11 @@
 		method = "execute">
 			<result name = "success">buyItemComplete.jsp</result>
 		</action>
+		
+		<action name = "MyPageAction"
+		class = "com.diworksdev.template2.action.MyPageAction"
+		method = "execute">
+			<result name = "success">myPage.jsp</result>
+		</action>
 	</package>
 </struts>
