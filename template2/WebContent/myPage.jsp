@@ -70,26 +70,26 @@
 					<table>
 						<tr>
 							<td>商品名</td>
-							<td><s:property value = "session.buyItem_name"/></td>
+							<td><s:property value = "session.buyItem_name" /></td>
 						</tr>
 						<tr>
 							<td>値段</td>
 							<td>
-								<s:property value = "session.total_price"/>
+								<s:property value = "session.total_price" />
 								<span>円</span>
 							</td>
 						</tr>
 						<tr>
 							<td>購入個数</td>
 							<td>
-								<s:property value = "session.total_count"/>
+								<s:property value = "session.total_count" />
 								<span>個</span>
 							</td>
 						</tr>
 						<tr>
 							<td>支払い方法</td>
 							<td>
-								<s:property value = "session.total_payment"/>
+								<s:property value = "session.total_payment" />
 							</td>
 						</tr>
 					</table>
@@ -99,7 +99,7 @@
 					</s:form>
 				</s:if>
 				<s:if test = "session.message != null">
-					<h3><s:property value = "session.mssage"/></h3>
+					<h3><s:property value = "session.message"/></h3>
 				</s:if>
 				<div>
 				<br>
