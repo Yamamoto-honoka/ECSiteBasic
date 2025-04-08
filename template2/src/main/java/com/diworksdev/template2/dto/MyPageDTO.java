@@ -7,7 +7,7 @@ public class MyPageDTO {
 	private String payment;
 	
 	public String getItemName() {
-		return itemName;
+		return this.itemName;
 	}
 	
 	public void setItemName(String itemName) {
@@ -15,7 +15,7 @@ public class MyPageDTO {
 	}
 	
 	public String getTotalPrice() {
-		return totalPrice;
+		return this.totalPrice;
 	}
 	
 	public void setTotalPrice(String totalPrice) {
@@ -23,7 +23,7 @@ public class MyPageDTO {
 	}
 	
 	public String getTotalCount() {
-		return totalCount;
+		return this.totalCount;
 	}
 	
 	public void setTotalCount(String totalCount) {
@@ -31,7 +31,7 @@ public class MyPageDTO {
 	}
 	
 	public String getPayment() {
-		return payment;
+		return this.payment;
 	}
 	
 	public void setPayment(String payment) {
